@@ -24,6 +24,14 @@ The script is made to work on these OS :
 - （已放弃）Github Gitpod云编译(参考：https://www.right.com.cn/forum/thread-1573038-1-1.html)
 - Deepin 15.11桌面版（群友测试ok）
 
+## 脚本使用教程
+
+[OpenwrtCompileScript使用说明.pdf](OpenwrtCompileScript使用说明.pdf) （有段时间没有更新了）
+
+**脚本视频教程加群** :**667491026**   （**拒绝大爷公子伸手党**)
+
+**脚本问题反馈** ：https://github.com/openwrtcompileshell/OpenwrtCompileScript/issues 或者加群反馈
+
 ## Usage 使用方法
 
 1、使用git克隆下载脚本并赋予执行权限
@@ -54,33 +62,29 @@ cd OpenwrtCompileScript && bash openwrt.sh
    clean_make         执行make clean清理一下源码然后再进行编译
    noclean_make       不执行make clean清理一下源码然后再进行编译
    update_clean_make  执行make clean 并同步最新的源码 再进行编译
-   update_clean_make_kernel  编译完成以后执行make kernel_menuconfig($red危险操作)
+   update_clean_make_kernel  编译完成以后执行make kernel_menuconfig(危险操作)
    update_script      将脚本同步到最新
+   update_script_rely 将脚本和源码依赖同步到最新
    help  查看帮助
 
 例子： 
    bash $openwrt help   查看帮助 
-   bash $openwrt update_script 将脚本同步到最新
+   bash $openwrt new_source_make   新建一个文件夹下载你需要的源码并进行编译
+   bash $openwrt update_script   将脚本同步到最新
    bash $openwrt 你的文件夹  clean_make    清理编译文件，再重新编译 
-   bash $openwrt 你的文件夹  update_clean_make  同步最新的源码清理编译文件再编译
+   bash $openwrt 你的文件夹  update_clean_make  同步最新的源码清理编译文件再编译 
+   bash $openwrt 你的文件夹  update_script_rely update_clean_make  脚本，源码依赖，源码同步最新，清理编译文件再编译
+
 
 ``` 
 ![Command_Line](doc/Command_Line.PNG)
-
-### 脚本使用教程
-
-[OpenwrtCompileScript使用说明.pdf](OpenwrtCompileScript使用说明.pdf)
-
-|**脚本视频教程**|:交流技术适当吹水群：667491026   （**拒绝大爷公子伸手党**)
-
-
 
 
 ## 版本修改记录
 
 ### ++2.9版本
 
-1. 修复变量错误
+1. 修复误
 2. 将插件默认选上我经常用的
 3. 添加天气预报
 4. 个别变量改名
